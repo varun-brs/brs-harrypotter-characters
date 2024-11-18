@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #1a4b84;
+  --chathams_blue: #1a4b84;
+  --tamarillo: #991e14;
+  --yellow_sea: #fead06;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #111d4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #eee;
+  margin-bottom: 30px;
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#charactersList {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.character {
+  list-style-type: none;
+  background-color: #eaeaea;
+  border-radius: 3px;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-areas: "name image" "house image" "actor image" "ancestry image" "dateOfBirth image";
+  text-align: left;
+}
+
+.character:hover {
+  background-color: #1a4b84;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.character > img {
+  max-height: 200px;
+  grid-area: image;
+}
+
+#searchBar {
+  width: 100%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#searchWrapper {
+  position: relative;
+}
+
+#searchWrapper::after {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+
+li {
+  list-style: none;
+}
